@@ -2,91 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,
-                   user-scalable=no,
-                   initial-scale=1.0,
-                   maximum-scale=1.0,
-                   minimum-scale=1.0">
-    <title>响应式</title>
+    <title>Title</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        .box{
-            width: 1000px;
-            margin: 0 auto;
-            border: 2px solid #000000;
-        }
-        .footer{
+        header,nav,footer{
+            height: 100px;
             width: 100%;
-            height: 30px;
-            background-color: #dddddd;
-            color: white;
-            font-size: 20px;
+            max-width: 960px;
+            background-color: #8c8c8c8c;
+            margin: 10px auto;
             text-align: center;
-            border-radius: 3px;
-            margin: 20px auto 20px;
+            line-height: 100px;
         }
-        .green{
-            background-color: green;
-            width:40%;
-            height: 200px;
+        article,img{
+            width:100%;
+            max-width: 960px;
+            margin:0 auto;
+            display: block;
+        }
+        article{
+            display: table;
+        }
+        article div{
+            background: url('images/qie.jpg') no-repeat center/100%;
+            padding-bottom: 50%;
+        }
+        section{
+            height: 300px;
             float: left;
-        }
-        .yellow{
-            background-color: yellow;
-            width: 40%;
-            height: 200px;
-            float: right;
-        }
-        .box-color .yellow {
+            text-align: center;
+            display: table;
 
         }
-        .clearfix{
+        p{
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+        }
+        .right{
+            background-color: #ff6600;
+            width: 25%;
+            margin-left:5%;
+        }
+        .left{
+
+            background-color: #f56000;
+            width: 70%;
+        }
+        .clearfix:before{
             content: "";
             display: block;
             clear: both;
         }
-        .box-img img {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-        .header{
-            width: 100%;
-            height: 30px;
-            background-color: #dddddd;
-            color: white;
-            font-size: 20px;
-            text-align: center;
-            border-radius: 3px;
-            margin: 20px auto 20px;
-
+        @media (max-width: 600px) {
+            .clearfix section{
+                width: 100%;
+                margin: 10px 0 0 0 ;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="box ">
-        <div>
-            <div class="header">页头</div>
-            <div class="header">页头</div>
-        </div>
-        <div class="box-img">
-            <img src="images/qie.jpg" alt="">
-        </div>
-        <div class="box-color ">
-            <div class="green">菜鸟教程(www.runoob.com)提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python,Java,Ruby,C,PHP , MySQL等各种编程语言的基础知识。
-                同时本站中.
-            </div>
-            <div class="yellow">菜鸟教程(www.runoob.com)提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python,Java,Ruby,C,PHP , MySQL等各种编程语言的基础知识。 同时本站中.
-            </div>
-        </div>
-        <div class="footer clearfix">页脚</div>
-        <div class="clearfix"></div>
-    </div>
-
+<header>页头</header>
+<nav>导航</nav>
+<article>
+    <div></div>
+</article>
+<article class="clearfix">
+    <section class="left ">
+        <p>
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+            HTML、CSS、Javascript、Python,Java,Ruby,C,PHP ,
+        </p>
+    </section>
+    <section class="right">
+        <p>
+            Mr. Johnson had never been up in an aerophane before and he had read a lot about air accidents, so one day when a friend offered to take him for a ride in his own small phane, Mr. Johnson was very worried about accepting. Finally, however, his friend persuaded him that it was very safe, and Mr. Johnson boarded the plane.
+        </p>
+    </section>
+</article>
+<footer>
+    页脚
+</footer>
 </body>
 </html>
