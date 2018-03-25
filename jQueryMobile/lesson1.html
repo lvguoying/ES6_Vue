@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>第一步</title>
+    <link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.min.css">
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            background-color: #ff6600;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color: #0088bb;
+            position: relative;
+            top: -100px;
+            left: -50px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div data-role="page" id="pageone" data-theme="b">
+        <div data-role="header">
+            <a href="#" data-role="button" class="btn1">首页</a>
+            <h1>欢迎来到我的主页</h1>
+            <a href="#" data-role="button" class="btn2">搜索</a>
+        </div>
+
+
+        <div data-role="content">
+            <div data-role="controlgroup" data-type="horizontal">
+                <p>水平分组：</p>
+                <a href="#" data-role="button">按钮 1</a>
+                <a href="#" data-role="button">按钮 2</a>
+                <a href="#" data-role="button">按钮 3</a>
+            </div><br>
+
+            <div data-role="controlgroup" data-type="vertical">
+                <p>垂直分组（默认）：</p>
+                <a href="#" data-role="button">按钮 1</a>
+                <a href="#" data-role="button">按钮 2</a>
+                <a href="#" data-role="button">按钮 3</a>
+            </div>
+        </div>
+            <div class="div1"></div>
+        <div class="div2"></div>
+        <div data-role="footer">
+            <h1>页脚文本</h1>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on("pageinit","#pageone",function(){
+
+            $(".btn1").on("tap",function(){
+                $(this).hide();
+            });
+            $('.btn2').click(function () {
+                console.log("11")
+            })
+
+            $(".div2").on("tap",function(){
+                $(this).hide();
+            });
+            $('.div1').click(function () {
+                console.log("11")
+            })
+
+        });
+    </script>
+</body>
+</html>
